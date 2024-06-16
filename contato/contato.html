@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala inicial e largura do viewport para dispositivos móveis -->
+    <title>Contato</title> <!-- Título da página -->
+    <link rel="stylesheet" href="contato.css"> <!-- Link para o arquivo de estilo CSS -->
+</head>
+<body>
+    <header>
+        <div class="nav-right">
+            <a href="../index.html" class="nav-btn">Voltar</a> <!-- Link para voltar ao índice -->
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    
+    <h6>Formulário de contato</h6> <!-- Título do formulário -->
+    <form id="contato-formulario"> <!-- Formulário de contato -->
+        <label for="email">E-mail:</label><br> <!-- Rótulo para o campo de e-mail -->
+        <input type="email" id="email" name="email" required><br><br> <!-- Campo de entrada para e-mail -->
+        <label for="message">Mensagem:</label><br> <!-- Rótulo para o campo de mensagem -->
+        <textarea id="message" name="message" rows="4" required></textarea><br><br> <!-- Área de texto para a mensagem -->
+        <input type="submit" value="Enviar"> <!-- Botão de envio do formulário -->
+    </form>
+
+    <script src="formScript.js"></script> <!-- Script JavaScript para manipulação do formulário -->
+</body>
+</html>

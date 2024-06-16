@@ -1,0 +1,146 @@
+/* Estilos básicos para o formulário de contato */
+* {
+    padding: 0; /* Define o preenchimento interno de todos os elementos como zero */
+    margin: 0; /* Define as margens de todos os elementos como zero */
+    box-sizing: border-box; /* Define o modelo de caixa como border-box para todos os elementos, incluindo o preenchimento e a borda no cálculo da largura e altura */
+    list-style: none; /* Remove os estilos de lista padrão (como marcadores) de elementos de lista */
+    text-decoration: none; /* Remove a decoração de texto padrão (como sublinhado) de todos os elementos */
+    font-family: "Jost", sans-serif; /* Define a família de fontes para todos os elementos como "Jost" (se disponível) ou fonte sans-serif genérica */
+}
+
+
+html {
+    scroll-behavior: smooth; /* Habilita o comportamento de rolagem suave para âncoras e elementos com scroll */
+}
+
+
+:root {
+    --bg-color: #1d1c1b; /* Cor de fundo geral */
+    --text-color: #fff; /* Cor do texto principal */
+    --main-color: #8a00a3; /* Cor principal de destaque */
+    --other-color: #858585; /* Outra cor secundária */
+    --h1-font: 5rem; /* Tamanho da fonte para h1 */
+    --p-font: 1.1rem; /* Tamanho da fonte para parágrafo */
+}
+
+body {
+    background: var(--bg-color); /* Cor de fundo */
+    color: var(--text-color); /* Cor do texto */
+    font-family: 'Jost', sans-serif; /* Fonte principal */
+    display: flex; /* Exibir como flexível */
+    flex-direction: column; /* Direção da flexbox como coluna */
+    justify-content: center; /* Centralizar conteúdo verticalmente */
+    align-items: center; /* Centralizar conteúdo horizontalmente */
+    height: 100vh; /* Altura de 100% da viewport */
+    margin: 0; /* Margem zero */
+    padding-top: 50px; /* Preenchimento superior */
+    /* Ajuste conforme necessário */
+}
+
+header {
+    position: fixed; /* Define a posição do cabeçalho como fixa, para que ele permaneça fixo na parte superior da janela ao rolar a página */
+    width: 100%; /* Define a largura do cabeçalho como 100% da largura do viewport */
+    top: 0; /* Alinha o topo do cabeçalho com o topo da janela de visualização */
+    right: 0; /* Alinha a extremidade direita do cabeçalho com a extremidade direita da janela de visualização */
+    z-index: 1000; /* Define a ordem de empilhamento do cabeçalho, garantindo que ele esteja acima de outros elementos com menor valor de z-index */
+    padding: 32px 13%; /* Adiciona preenchimento interno de 32 pixels na parte superior e inferior e 13% nas laterais do cabeçalho */
+    display: flex; /* Define o modelo de exibição como flexível para que os itens dentro do cabeçalho possam ser organizados em uma linha */
+    align-items: center; /* Centraliza verticalmente os itens dentro do cabeçalho */
+    justify-content: space-between; /* Distribui os itens dentro do cabeçalho com espaço igual entre eles */
+    transition: all .50s ease; /* Aplica uma transição suave para todas as mudanças de propriedade com duração de 0.5 segundos e função de transição "ease" */
+    background: var(--bg-color); /* Define o plano de fundo do cabeçalho com a cor definida pela variável --bg-color */
+}
+
+.nav-right {
+    display: flex; /* Flexbox */
+    align-items: left; /* Alinhamento vertical */
+}
+
+.nav-btn {
+    display: inline-block; /* Bloco inline */
+    padding: 14px 35px; /* Espaçamento */
+    background: var(--main-color); /* Fundo */
+    color: var(--text-color); /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    margin-left: 75vw; /* Margem à esquerda, ajustável conforme necessário */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 0.05em; /* Espaçamento entre letras */
+    border-radius: 30px; /* Borda arredondada */
+    border: 2px solid rgb(255, 255, 255); /* Borda */
+    transition: all 0.6s ease; /* Transição suave */
+    position: fixed; /* Posição fixa */
+}
+
+.nav-btn:hover {
+    background: transparent; /* Fundo transparente ao passar o mouse */
+    border: 2px solid var(--main-color); /* Borda ao passar o mouse */
+}
+
+#menu-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de ponteiro */
+    z-index: 10001; /* Índice Z */
+    margin-left: 20px; /* Margem esquerda */
+    display: none; /* Não exibido */
+}
+
+h6 {
+    text-align: center; /* Alinhamento central do texto */
+    color: var(--text-color); /* Cor do texto */
+    font-size: 2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+form {
+    border: 2px solid var(--bg-color); /* Borda mais grossa */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 20px; /* Borda arredondada */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    background: #8a00a3; /* Cor de fundo */
+    color: var(--bg-color); /* Cor do texto */
+    width: 100%; /* Largura total */
+    max-width: 500px; /* Largura máxima */
+}
+
+label {
+    display: block; /* Exibir como bloco */
+    margin-bottom: 8px; /* Margem inferior */
+    color: var(--text-color); /* Cor do texto */
+    font-weight: bold; /* Peso da fonte */
+}
+
+input[type="email"],
+textarea {
+    width: 100%; /* Largura total */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem inferior */
+    border: 2px solid var(--bg-color); /* Borda mais grossa */
+    border-radius: 5px; /* Borda arredondada */
+    background: var(--text-color); /* Cor de fundo */
+    color: var(--bg-color); /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: var(--other-color); /* Cor do placeholder */
+}
+
+input[type="submit"] {
+    background-color: var(--bg-color); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 15px 25px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+/* Adicionando margem superior para o formulário */
+form {
+    margin-top: 20px; /* Margem superior */
+}
+
